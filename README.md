@@ -27,5 +27,17 @@ Declarative VS Imperative
    
    Note : Examples are present in ImperativeDeclarative Package
 
-
+Lambda Expressions
+-----------------
+   1. Same has method without a name
+   2. Anonymous Function
+   3. Can be assigned to a variable and can be passed around
+   4. Not tied to class
+   5. Structure
+      ![img.png](img.png)
+   6. Usage 
+      1. used to implement **Function Interfaces**
+   7. Syntax
+      1. No {} - if single statement is present
+      2.  Dropping Input parameters type - we can drop the type of parameters if compiler is able to resolve them
 
