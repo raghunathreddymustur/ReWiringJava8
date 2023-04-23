@@ -125,8 +125,11 @@ BinaryOperator
       1. `public static <T> BinaryOperator<T> minBy(Comparator<? super T> comparator)` 
    2. maxBy - return max of two input parameters based on provided comparator
       1. `public static <T> BinaryOperator<T> maxBy(Comparator<? super T> comparator)`
-
+4. Example
+   ![img_3.png](img_3.png)
 Supplier
 --------
-1. Don't take input and returns
-2.  `T get();`
+1. Don't take input but returns
+2. `T get();`
+3. Example
+   ![img_2.png](img_2.png)
