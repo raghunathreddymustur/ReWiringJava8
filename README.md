@@ -40,6 +40,7 @@ Lambda Expressions
    7. Syntax
       1. `No {} & return keyword` - if single statement is present
       2. `Dropping Input parameters type` - we can drop the type of parameters if compiler is able to resolve them
+      3. `Dropping ()` - if there is only one parameter
 
 
 Functional Interfaces
@@ -89,7 +90,23 @@ Predicate
          1. `default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other) `
       3. negate
          1. `default BiPredicate<T, U> negate()`
-   
 
+Function
+-------
+1. Represents a function that accepts one argument and returns a result.
+2. `R apply(T t)` -- takes input a returns output
+3. Chaining
+   1. Compose - Returns a composed function that first applies the before function to its input, and then applies this function to the result.
+      1. `default <V> Function<V, R> compose(Function<? super V, ? extends T> before)`
+      
+   2. addThen - Returns a composed function that first applies this function to its input, and then applies the after function to the result.
+      2. `default <V> Function<T, V> andThen(Function<? super R, ? extends V> after) `
+   
+4. BiFunction
+   1. Takes two arguments and returns one
+      1. `R apply(T t, U u);`
+   2. Chaining
+      1. addThen -Returns a composed function that first applies this function to its input, and then applies the after function to the result.
+         1. `default <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V> after)`
 
 
