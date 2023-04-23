@@ -1,7 +1,7 @@
 package FunctionalInterfaces.consumer.biConsumer;
 
-import FunctionalInterfaces.consumer.exampleTwo.Student;
-import FunctionalInterfaces.consumer.exampleTwo.StudentDataBase;
+import FunctionalInterfaces.model.Student;
+import FunctionalInterfaces.model.StudentDataBase;
 
 import java.util.List;
 import java.util.function.BiConsumer;

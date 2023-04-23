@@ -1,11 +1,14 @@
 package FunctionalInterfaces.consumer.exampleTwo;
 
+import FunctionalInterfaces.model.Student;
+import FunctionalInterfaces.model.StudentDataBase;
+
 import java.util.List;
 import java.util.function.Consumer;
 
 public class ConsumerTwo {
     public static void main(String[] args) {
-        List<Student> studentList=StudentDataBase.getAllStudents();
+        List<Student> studentList= StudentDataBase.getAllStudents();
 
         // ForEach method with Functional interface from java 8
         //forEach will call apply method on every element of list

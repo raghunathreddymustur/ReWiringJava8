@@ -38,19 +38,21 @@ Lambda Expressions
    6. Usage 
       1. used to implement **Function Interfaces**
    7. Syntax
-      1. No {} - if single statement is present
-      2.  Dropping Input parameters type - we can drop the type of parameters if compiler is able to resolve them
+      1. `No {} & return keyword` - if single statement is present
+      2. `Dropping Input parameters type` - we can drop the type of parameters if compiler is able to resolve them
 
 
 Functional Interfaces
 ---------------------
 1. Interface Which has only one abstract method is known as functional interface
    1. but can have any default and static methods
-2. **@FunctionalInterface** annotation id used to represent the functional interfaces
+2. `@FunctionalInterface` annotation id used to represent the functional interfaces
 3. Functional interfaces make it easier to write functional-style code by reducing the verbosity of anonymous inner classes.
 4. Java libraries like Streams and Collections have written to support functional interfaces
    1. Example enhanced forEach loop
-5. Its makes code readable and reusable
+5. **_Its makes code readable, reusable and maintainable_** 
+6. All functional interfaces are present in following package
+   1. `import java.util.function`
 
 Important Functional Interfaces
 ------------------------------
@@ -63,4 +65,31 @@ Consumer
 3. **BiConsumer**
    1. `accept(T t, T t)`
    2. `addThen(Consumer)`
+   
+Predicate
+---------
+1. Represents a predicate (boolean-valued function) of one argument.
+2. `boolean test(T t) `-Evaluates this predicate on the given argument.
+3. Chaining
+   1. And
+      1. `default Predicate<T> and(Predicate<? super T> other)`
+   2. Or
+      1. `default Predicate<T> or(Predicate<? super T> other)`
+   3. Negate
+      1. `default Predicate<T> negate()`
+   4. Equal - Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, Object).
+      1. `static <T> Predicate<T> isEqual(Object targetRef)`
+4. BiPredicate
+   1. Represents a predicate (boolean-valued function) of two arguments. This is the two-arity specialization of Predicate.
+   2. `boolean test(T t, U u)` - Evaluates this predicate on the given arguments.
+   3. Chaining
+      1. And
+         1. `default BiPredicate<T, U> and(BiPredicate<? super T, ? super U> other)`
+      2. Or
+         1. `default BiPredicate<T, U> or(BiPredicate<? super T, ? super U> other) `
+      3. negate
+         1. `default BiPredicate<T, U> negate()`
+   
+
+
 

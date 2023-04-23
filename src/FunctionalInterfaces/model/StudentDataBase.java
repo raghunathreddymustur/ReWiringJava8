@@ -1,4 +1,4 @@
-package FunctionalInterfaces.consumer.exampleTwo;
+package FunctionalInterfaces.model;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +24,7 @@ public class StudentDataBase {
         /**
          * 4th grade students
          */
-        Student student5 = new Student("Sophia",4,3.5,"female", Arrays.asList("swimming", "dancing","football"));
+        Student student5 = new Student("Jack",4,3.5,"female", Arrays.asList("swimming", "dancing","football"));
         Student student6 = new Student("James",4,3.9,"male", Arrays.asList("swimming", "basketball","baseball","football"));
 
         List<Student> students = Arrays.asList(student1,student2,student3,student4,student5,student6);

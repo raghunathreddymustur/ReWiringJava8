@@ -1,4 +1,4 @@
-package FunctionalInterfaces.consumer.exampleTwo;
+package FunctionalInterfaces.model;
 
 import java.util.ArrayList;
 import java.util.List;
