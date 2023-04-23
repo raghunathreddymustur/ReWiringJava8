@@ -126,3 +126,7 @@ BinaryOperator
    2. maxBy - return max of two input parameters based on provided comparator
       1. `public static <T> BinaryOperator<T> maxBy(Comparator<? super T> comparator)`
 
+Supplier
+--------
+1. Don't take input and returns
+2.  `T get();`
