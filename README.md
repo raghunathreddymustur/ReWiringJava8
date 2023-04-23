@@ -127,6 +127,7 @@ BinaryOperator
       1. `public static <T> BinaryOperator<T> maxBy(Comparator<? super T> comparator)`
 4. Example
    ![img_3.png](img_3.png)
+
 Supplier
 --------
 1. Don't take input but returns
