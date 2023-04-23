@@ -109,4 +109,20 @@ Function
       1. addThen -Returns a composed function that first applies this function to its input, and then applies the after function to the result.
          1. `default <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V> after)`
 
+Unary Operator
+-------------
+1. If input and output of same time
+2. **Inherits the functionality** of **Function** Functional Interface
+3. Example
+   ![img_1.png](img_1.png)
+
+BinaryOperator
+-------------
+1. If 2 input and output of same time
+2. **Inherits the functionality** of **BiFunction** Functional Interface
+3. Utility Methods
+   1. minBy - return min of two input parameters based on provided comparator
+      1. `public static <T> BinaryOperator<T> minBy(Comparator<? super T> comparator)` 
+   2. maxBy - return max of two input parameters based on provided comparator
+      1. `public static <T> BinaryOperator<T> maxBy(Comparator<? super T> comparator)`
 
