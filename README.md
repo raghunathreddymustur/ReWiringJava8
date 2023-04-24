@@ -134,3 +134,15 @@ Supplier
 2. `T get();`
 3. Example
    ![img_2.png](img_2.png)
+
+Method References
+-----------------
+1. Method reference is used to refer method of functional interface. 
+   1. Reuse to existing method via method reference to replace lambda expression
+2. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference. 
+3. Types of method references
+   1. Method reference to an instance method of a **particular object** of a class
+   2. Method reference to the static method of a class
+   3. Reference to an Instance Method of an Arbitrary Object of a Particular Type
+      1. This type of method reference refers to non-static instance methods without creating a custom object. It uses an anonymous object to refer to the instance method.
+   
