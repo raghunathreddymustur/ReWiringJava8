@@ -41,6 +41,10 @@ Lambda Expressions
       1. `No {} & return keyword` - if single statement is present
       2. `Dropping Input parameters type` - we can drop the type of parameters if compiler is able to resolve them
       3. `Dropping ()` - if there is only one parameter
+   8. Restrictions on local variables
+      1. Cannot redeclare or reassign the same local variable inside lambda
+      2. In lambda scope local variables are effectively final
+   9. No Restrictions on instance and class(static) variables
 
 
 Functional Interfaces
