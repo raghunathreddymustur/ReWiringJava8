@@ -156,3 +156,39 @@ Method References
    2. Empty and parameter constructors should be present accordingly to method reference
    ![img_5.png](img_5.png)
    
+Streams
+-------
+1. Intro
+   1. Streams are introduced to promote declarative way of programming 
+   2. Makes developer life easy to work with collection framework
+   3. Functional interfaces, lambda expressions, streams will go in handy to make code readable and reusable
+   4. Example
+      ![img_6.png](img_6.png)
+   5. How Streams Work
+      1. Input Stream
+      2. Intermediate Operations
+      3. Terminal Operations
+      4. `Note : Stream Intermediate are lazy and will only be invoked by terminal Method`
+         ![img_7.png](img_7.png)
+   6. Debugging a stream
+      1. `Peek(Consumer)` intermediate method is used to see state of stream after every intermediate operation
+Collection vs Stream
+---------------------
+   1. we cannot modify a stream once created. It is immutable explicitly
+   2. No random access of an element from a stream
+   3. Streams are lazy, and are activated by terminal operations
+   4. Stream can only be used once
+      1. Ex : We can't iterate a stream twice
+   5. Streams are iterated internally vai forEach Method
+
+
+map()
+----
+1. It is an intermediate operation
+2. Transform the input to required format
+3. `<R> Stream<R> map(Function<? super T, ? extends R> mapper);`
+
+Example
+![img_9.png](img_9.png)
+![img_8.png](img_8.png)
+
