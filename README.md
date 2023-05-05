@@ -192,3 +192,23 @@ Example
 ![img_9.png](img_9.png)
 ![img_8.png](img_8.png)
 
+flatMap()
+--------
+
+1. Similar to map() it transforms input to different required format
+2. Usually used to transform Stream of Multivalued Objects
+   1. Example `Stream<List<String>>` --> List<String> 
+      ![img_11.png](img_11.png)
+      ![img_10.png](img_10.png)
+
+distinct() || count() || sorted () 
+---------------------------------
+
+![img_12.png](img_12.png)
+![img_13.png](img_13.png)
+![img_14.png](img_14.png)
+![img_15.png](img_15.png)
+![img_16.png](img_16.png)
+![img_17.png](img_17.png)
+![img_19.png](img_19.png)
+![img_18.png](img_18.png)
