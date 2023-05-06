@@ -181,7 +181,8 @@ Collection vs Stream
       1. Ex : We can't iterate a stream twice
    5. Streams are iterated internally vai forEach Method
 
-
+Intermediate  & Terminal Operations
+-----------------------------------
 map()
 ----
 1. It is an intermediate operation
@@ -212,3 +213,56 @@ distinct() || count() || sorted ()
 ![img_17.png](img_17.png)
 ![img_19.png](img_19.png)
 ![img_18.png](img_18.png)
+
+limit() || skip()
+----------------
+1. limit
+   1. Consider only first n elements of stream
+2. skip
+   1. skip only first n elements of stream
+3. Example
+   ![img_30.png](img_30.png)
+
+Reduce()
+--------
+   1. use to reduce stream of values to single value
+   2. syntax
+   3. Type 0
+      ![img_21.png](img_21.png)
+      ![img_29.png](img_29.png)
+   4. Type 1
+      ![img_22.png](img_22.png)
+      ![img_26.png](img_26.png)
+   5. Type 2
+      ![img_23.png](img_23.png)
+      ![img_24.png](img_24.png)
+      ![img_27.png](img_27.png)
+      ![img_28.png](img_28.png)
+
+Boolean Terminal Operations
+--------------------------
+1. allMatch
+2. anyMatch
+3. noneMatch
+4. Example
+   ![img_32.png](img_32.png)
+
+Find Terminal Operations
+------------------------
+1. findFirst
+   1. return first element encountered ( if there is parallel it will return first encountered element among all parallel streams)
+2. findAny
+   1. returns first element encountered
+3. returns `Optional<>`
+4. Example
+   ![img_33.png](img_33.png)
+5. Ignores rest of the stream as soon a value is encountered
+
+Summary of functions
+------
+![img_31.png](img_31.png)
+
+Short Circuit Operations
+------------------------
+1. Does not iterate total streams but returns as soon as requirement is met
+![img_34.png](img_34.png)
