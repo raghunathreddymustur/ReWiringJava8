@@ -258,6 +258,58 @@ Find Terminal Operations
    ![img_33.png](img_33.png)
 5. Ignores rest of the stream as soon a value is encountered
 
+Stream Factory Methods
+---------------------
+1. of
+   1. to create a stream 
+   2.  `public static<T> Stream<T> of(T... values)`
+2. iterate
+   1. Infinite stream
+   2. limit() can be used to stop infinity
+   3. `public static<T> Stream<T> iterate(final T seed, final UnaryOperator<T> f)`
+3. generate
+   1. Infinite stream
+   2. limit() can be used to stop infinity
+   3. `public static<T> Stream<T> generate(Supplier<T> s)`
+4. Example
+   ![img_35.png](img_35.png)
+
+Numeric Streams
+--------------
+1. Used to represent `primitive` values in a stream
+2. Types
+   1. IntStream
+      1. Ranges
+         1. range(m,n)
+            1. n in not inclusive 
+         2. rangeClosed(m,n)
+            1. n is inclusive
+   2. LongStream
+      1. Ranges
+         1. Same as IntStream
+   3. DoubleStream
+      1. Ranges
+         1. No Method, but can be achieved by IntStream or LongStream
+   4. Example
+      ![img_36.png](img_36.png)
+3. Aggregate Functions
+   1. Max
+   2. Min
+   3. Sum
+   4. Average
+   5. Example
+      ![img_37.png](img_37.png)
+4. Boxing and UnBoxing
+   1. boxed()
+      1. used to convert primitive to object
+   2. mapTo____
+      1. used to convert object to primitive
+   3. mapToObj
+      1. used to map input to any predefined or Custom Object 
+   4. Example
+      ![img_40.png](img_40.png)
+
+
 Summary of functions
 ------
 ![img_31.png](img_31.png)
@@ -266,3 +318,4 @@ Short Circuit Operations
 ------------------------
 1. Does not iterate total streams but returns as soon as requirement is met
 ![img_34.png](img_34.png)
+
