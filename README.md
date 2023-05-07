@@ -410,6 +410,19 @@ partitionBy
       1. Example
          ![img_61.png](img_61.png)`
 
+parallel Streams
+--------------
+1. Improves the application performance by utilizing system resource optimally
+2. Internally Fork/Join frame to achieve efficiency
+3. Example
+   ![img_62.png](img_62.png)
+   ![img_63.png](img_63.png)
+   ![img_64.png](img_64.png)
+4. Not to use Parallel Streams
+   1. If not used wisely parallel stream will **perform badly** compared to sequential 
+   2. if you are having a chance of race condition ( updating mutable object )
+5. Always check the performance of a method under sequential and parallel scenarios before using them
+   
 
 Summary of functions
 ------
