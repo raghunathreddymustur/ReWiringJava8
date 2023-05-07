@@ -309,6 +309,107 @@ Numeric Streams
    4. Example
       ![img_40.png](img_40.png)
 
+More Terminal Operations - Collect
+----------------------
+1. **joining**
+   1. syntax
+      1. `public static Collector<CharSequence, ?, String> joining()`
+      2. `public static Collector<CharSequence, ?, String> joining(CharSequence delimiter)`
+      3. `public static Collector<CharSequence, ?, String> joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)`
+   2. Example
+      1. Code
+         ![img_42.png](img_42.png)
+      2. output
+         ![img_43.png](img_43.png)
+2. **counting**
+   1. syntax
+      1. `public static <T> Collector<T, ?, Long> counting()`
+   2. Example
+      ![img_44.png](img_44.png)
+3. **mapping**
+   1. syntax
+      `public static <T, U, A, R> Collector<T, ?, R> mapping(Function<? super T, ? extends U> mapper, Collector<? super U, A, R> downstream)`
+   2. Example
+      ![img_45.png](img_45.png)
+4. **maxBy & minBy**
+   1. Takes instance of `Comparator` as input and sorts accordingly
+   2. returns `Optional` 
+   3. Syntax
+      1. minBy `public static <T> Collector<T, ?, Optional<T>> minBy(Comparator<? super T> comparator)`
+      2. maxBy `public static <T> Collector<T, ?, Optional<T>> maxBy(Comparator<? super T> comparator)`
+   4. Example
+      ![img_46.png](img_46.png)
+5. **summingInt & averagingInt**
+   1. syntax
+      1. `public static <T> Collector<T, ?, IntSummaryStatistics> summarizingInt(ToIntFunction<? super T> mapper)`
+         1. Example
+            ![img_47.png](img_47.png)
+      2. ` public static <T> Collector<T, ?, Double> averagingInt(ToIntFunction<? super T> mapper)`
+         1. Example
+            ![img_48.png](img_48.png)
+   
+6. **summingLong || summingDouble || averagingLong || averagingDouble**
+   1. Same as `summingInt & averagingInt`
+
+7. **groupingBy**
+   1. same as SQL groupBy
+   2. Types
+      1. Type 1
+         1. Syntax
+            1. `public static <T, K> Collector<T, ?, Map<K, List<T>>> groupingBy(Function<? super T, ? extends K> classifier)`
+            2. Example
+               ![img_49.png](img_49.png)
+            3. Output
+               ![img_50.png](img_50.png)
+         2. Custom Function
+            1. Example
+               ![img_52.png](img_52.png)
+            2. Output
+               1. ![img_51.png](img_51.png)
+            
+      2. Type 2
+         1. Two level
+         2. syntax
+            1. classifier – a classifier function mapping input elements to keys
+            2. downstream – a Collector implementing the downstream reduction
+            3. `public static <T, K, A, D> Collector<T, ?, Map<K, D>> groupingBy(Function<? super T, ? extends K> classifier,Collector<? super T, A, D> downstream)`
+            4. Example
+               ![img_53.png](img_53.png)
+               ![img_56.png](img_56.png)
+               ![img_54.png](img_54.png)
+               ![img_55.png](img_55.png)
+      3. Type 3 
+         1. Syntax
+            `public static <T, K, D, A, M extends Map<K, D>>
+            Collector<T, ?, M> groupingBy(Function<? super T, ? extends K> classifier,
+            Supplier<M> mapFactory,
+            Collector<? super T, A, D> downstream)`
+         2. Example
+            ![img_57.png](img_57.png)
+            ![img_58.png](img_58.png)
+
+collectAndThen
+-------------
+1. **to work with Optional<>**
+2. syntax
+   1. `public static<T,A,R,RR> Collector<T,A,RR> collectingAndThen(Collector<T,A,R> downstream, Function<R,RR> finisher)`
+3. Example
+   ![img_59.png](img_59.png)
+
+partitionBy
+----------
+1. Similar to groupBy
+2. accepts a predicate
+3. returns a map
+   1. **keys will only be true and false**
+4. syntax
+   1. `public static <T> Collector<T, ?, Map<Boolean, List<T>>> partitioningBy(Predicate<? super T> predicate)`
+      1. Example
+         ![img_60.png](img_60.png)
+   2. `public static <T, D, A> Collector<T, ?, Map<Boolean, D>> partitioningBy(Predicate<? super T> predicate, Collector<? super T, A, D> downstream)`
+      1. Example
+         ![img_61.png](img_61.png)`
+
 
 Summary of functions
 ------
