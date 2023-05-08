@@ -422,7 +422,79 @@ parallel Streams
    1. If not used wisely parallel stream will **perform badly** compared to sequential 
    2. if you are having a chance of race condition ( updating mutable object )
 5. Always check the performance of a method under sequential and parallel scenarios before using them
-   
+
+Optional
+-------
+1. The purpose of the class is to provide a type-level solution for representing optional values instead of null references.
+2. Why
+   1. Let's start with an example to see the dangers of null. Let's consider a nested object structure for a Computer, as illustrated in Figure 1.
+   ![img_65.png](img_65.png)
+   2. What can you do to prevent unintended null pointer exceptions? You can be defensive and add checks to prevent null dereferences, as shown in Listing
+   ![img_66.png](img_66.png)
+   3. you can see that the code in Listing 1 quickly becomes very ugly due to the nested checks. Unfortunately, we need a lot of boilerplate code to make sure we don't get a NullPointerException. In addition, it's just annoying that these checks get in the way of the business logic. In fact, they are decreasing the overall readability of our program.
+3. Methods
+   1. ofNullable
+      1. Returns an Optional describing the specified value, if non-null, otherwise returns an empty Optional.
+      2. used to wrap an object that might be become null
+      3. syntax
+         1.` public static <T> Optional<T> ofNullable(T value)`
+         1. Example
+            ![img_67.png](img_67.png)
+            ![img_68.png](img_68.png)
+   2. of
+      1. used to wrap non-null object, if object is null then it throws null pointer exception
+      2. syntax
+         ![img_69.png](img_69.png)
+   3. empty
+      1. Returns an empty Optional instance. No value is present for this Optional
+      2. Syntax
+         1. `public static<T> Optional<T> empty()`
+      3. Example
+         ![img_70.png](img_70.png)
+   4. orElse
+      1. Return the value if present, otherwise return other.
+      2. Syntax
+         1. `public T orElse(T other)`
+      3. Example
+         ![img_71.png](img_71.png)
+         ![img_72.png](img_72.png)
+   5. orElseGet
+      1. Same as orElse but takes **Supplier** as input
+      2. Syntax
+         1. `public T orElseGet(Supplier<? extends T> other)`
+      3. Example
+         ![img_73.png](img_73.png)
+   6. orElseThrow
+      1. Return the contained value, if present, otherwise throw an exception to be created by the provided supplier.
+      2. Takes supplier as input
+      3. Syntax
+         1. `public <X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier) throws X`
+      4. Example
+         ![img_74.png](img_74.png)
+   7. ifPresent
+      1. If a value is present, invoke the specified consumer with the value, otherwise do nothing.
+      2. Syntax
+         1. `public void ifPresent(Consumer<? super T> consumer)`
+         2. Example
+            ![img_75.png](img_75.png)
+   8. filter and map
+      1. filter
+         1. If a value is present, and the value matches the given predicate, return an Optional describing the value, otherwise return an empty Optional.
+         2. Syntax
+            1. `public Optional<T> filter(Predicate<? super T> predicate)`
+      2. map
+         1. If a value is present, apply the provided mapping function to it, and if the result is non-null, return an Optional describing the result. Otherwise return an empty Optional.
+         2. Syntax
+            1. `public<U> Optional<U> map(Function<? super T, ? extends U> mapper)`
+         3. Example
+            ![img_76.png](img_76.png)
+   9. flatMap
+      1. Used only Nested Optional inside an object
+      2. If a value is present, apply the provided Optional-bearing mapping function to it, return that result, otherwise return an empty Optional. This method is similar to map(Function), but the provided mapper is one whose result is already an Optional, and if invoked, flatMap does not wrap it with an additional Optional.
+      3. syntax
+         1. `public<U> Optional<U> flatMap(Function<? super T, Optional<U>> mapper)`
+      4. Example 
+         1. Check OptionalClass.flatMapExample.java
 
 Summary of functions
 ------
