@@ -115,7 +115,7 @@ Function
 
 Unary Operator
 -------------
-1. If input and output of same time
+1. If input and output of same type
 2. **Inherits the functionality** of **Function** Functional Interface
 3. Example
    ![img_1.png](img_1.png)
