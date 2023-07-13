@@ -51,7 +51,7 @@ Lambda Expressions
 Functional Interfaces
 ---------------------
 1. Interface Which has only one abstract method is known as functional interface
-   1. but can have any default and static methods
+   1. but can have any no of default and static methods
 2. `@FunctionalInterface` annotation id used to represent the functional interfaces
 3. Functional interfaces make it easier to write functional-style code by reducing the verbosity of anonymous inner classes.
 4. Java libraries like Streams and Collections have written to support functional interfaces
