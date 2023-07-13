@@ -414,7 +414,7 @@ partitionBy
 parallel Streams
 --------------
 1. Improves the application performance by utilizing system resource optimally
-2. Internally Fork/Join frame to achieve efficiency
+2. Internally Fork/Join framework to achieve efficiency
 3. Example
    ![img_62.png](img_62.png)
    ![img_63.png](img_63.png)
