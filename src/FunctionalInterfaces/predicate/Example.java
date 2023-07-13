@@ -18,7 +18,7 @@ public class Example {
         System.out.println("And "+predicate.and(predicate1).test("Raghu"));
 
         //Or
-        System.out.println("Or "+predicate.and(predicate1).test("Ragu"));
+        System.out.println("Or "+predicate.or(predicate1).test("Ragu"));
 
         //Negate
         System.out.println("Negate "+ predicate.and(predicate1).negate().test("Ragu"));
