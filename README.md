@@ -7,7 +7,7 @@ Why Java 8 ?
    1. embraces creating immutable objects
    2. more concise and readable
    3. allows passing of functions as a method parameters
-      1. Useful when you implemting callbacks
+      1. Useful when you are implemting callbacks
    5. declarative way of writing code
       1. We are only worried about the result not the algorithm behind it.
          1. Ex: SQl quires
