@@ -47,6 +47,8 @@ Lambda Expressions
    8. Restrictions on local variables
       1. Cannot redeclare or reassign the same local variable inside lambda
       2. In lambda scope local variables are effectively final
+         <img width="472" alt="image" src="https://github.com/raghunathreddymustur/ReWiringJava8/assets/38384536/5fc6340d-dad8-4d2c-be71-747499563b17">
+
    9. No Restrictions on instance and class(static) variables
 
 
