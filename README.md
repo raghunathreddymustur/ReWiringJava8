@@ -5,8 +5,10 @@ Why Java 8 ?
 -------------
 1. Supports functional programming
    1. embraces creating immutable objects
-   2. more concise and readable
-   3. allows passing of functions as a method parameters
+      1. Example
+         1. Streams API: The Streams API introduced in Java 8 encourages a functional programming style that works well with immutable objects. Operations on streams do not modify the underlying data source; instead, they return a new stream that reflects the result. This aligns with the principle of immutability, where instead of changing an object, you create a new object with the modified state.
+   3. more concise and readable
+   4. allows passing of functions as a method parameters
       1. Useful when you are implemting callbacks
    5. declarative way of writing code
       1. We are only worried about the result not the algorithm behind it.
