@@ -20,7 +20,7 @@ Why Java 8 ?
 Declarative VS Imperative
 -------------------------
    1. Imperative
-      1. Immutable objects
+      1. Mutable objects
          1. can result in problems while running in multithreaded environment
       2. Not Readable Code
    2. Declarative
