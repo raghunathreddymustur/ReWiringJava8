@@ -500,6 +500,11 @@ Optional
          1. `public<U> Optional<U> flatMap(Function<? super T, Optional<U>> mapper)`
       4. Example 
          1. Check OptionalClass.flatMapExample.java
+        
+ concatenate two Streams
+ -----------------------
+ <img width="433" alt="image" src="https://github.com/raghunathreddymustur/ReWiringJava8/assets/38384536/afc63098-ee14-41d2-b91a-d26455db5b2d">
+
 
 Summary of functions
 ------
